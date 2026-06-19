@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://whttectand.github.io/portal-web-i-game-com-cn/sitemap.xml
