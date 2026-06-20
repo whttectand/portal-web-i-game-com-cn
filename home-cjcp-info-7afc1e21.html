@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>彩经网 · 导航介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #f4f9fc;
+            color: #1f2e3a;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #167d7f;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #0b5b5c;
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 顶部导航 */
+        .top-nav {
+            background: white;
+            padding: 12px 0;
+            border-bottom: 1px solid #d9e9ed;
+            box-shadow: 0 1px 4px rgba(22, 125, 127, 0.06);
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-weight: 600;
+            font-size: 1.4rem;
+            color: #167d7f;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            font-size: 0.95rem;
+        }
+
+        .nav-links span {
+            color: #2e4a52;
+            padding: 4px 0;
+            border-bottom: 2px solid transparent;
+            cursor: default;
+        }
+
+        .nav-links a {
+            color: #2e4a52;
+            padding: 4px 0;
+            border-bottom: 2px solid transparent;
+        }
+
+        .nav-links a:hover {
+            border-bottom-color: #167d7f;
+            text-decoration: none;
+        }
+
+        /* Hero 区域 */
+        .hero {
+            padding: 60px 0 50px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            color: #0b3b3c;
+            margin-bottom: 16px;
+        }
+
+        .hero .tagline {
+            font-size: 1.1rem;
+            color: #3a5e62;
+            max-width: 640px;
+            margin: 0 auto 28px;
+            padding: 0 12px;
+        }
+
+        .hero-intro {
+            background: white;
+            border-radius: 28px;
+            padding: 32px 28px;
+            box-shadow: 0 4px 14px rgba(22, 125, 127, 0.08);
+            margin: 0 4px;
+            text-align: left;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-intro p {
+            margin-bottom: 14px;
+            color: #1f3840;
+        }
+
+        .hero-intro p:last-child {
+            margin-bottom: 0;
+        }
+
+        .highlight-link {
+            background: #e2f3f0;
+            padding: 2px 6px;
+            border-radius: 4px;
+            white-space: nowrap;
+        }
+
+        /* 三个场景卡片网格 */
+        .scene-section {
+            padding: 20px 0 40px;
+        }
+
+        .scene-section h2 {
+            font-size: 1.6rem;
+            font-weight: 450;
+            color: #145c5e;
+            margin-bottom: 28px;
+            text-align: center;
+            letter-spacing: 0.3px;
+        }
+
+        .scene-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .scene-card {
+            background: white;
+            border-radius: 20px;
+            padding: 32px 22px 26px;
+            box-shadow: 0 3px 12px rgba(16, 86, 88, 0.06);
+            border: 1px solid #d4e7ea;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .scene-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 24px rgba(22, 125, 127, 0.08);
+        }
+
+        .scene-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+            color: #167d7f;
+        }
+
+        .scene-card h3 {
+            font-size: 1.2rem;
+            font-weight: 550;
+            color: #0b4648;
+            margin-bottom: 10px;
+        }
+
+        .scene-card p {
+            font-size: 0.96rem;
+            color: #2c4d52;
+            margin-bottom: 0;
+        }
+
+        /* 常见说明 / FAQ 摘要 */
+        .faq-summary {
+            background: #e8f2f0;
+            border-radius: 36px;
+            padding: 40px 28px;
+            margin: 32px 0 50px;
+        }
+
+        .faq-summary h2 {
+            font-size: 1.5rem;
+            font-weight: 450;
+            color: #145c5e;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 20px;
+            padding: 20px 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 6px rgba(22, 125, 127, 0.04);
+        }
+
+        .faq-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .faq-q {
+            font-weight: 530;
+            color: #0b4648;
+            margin-bottom: 6px;
+            font-size: 1.02rem;
+        }
+
+        .faq-a {
+            font-size: 0.95rem;
+            color: #2f5055;
+        }
+
+        .faq-a a {
+            font-weight: 500;
+        }
+
+        /* 底部 */
+        .footer {
+            border-top: 1px solid #cde0e3;
+            padding: 30px 0 40px;
+            text-align: center;
+            color: #3a6367;
+            font-size: 0.9rem;
+        }
+
+        .footer a {
+            color: #167d7f;
+        }
+
+        /* 响应式 */
+        @media (max-width: 850px) {
+            .scene-grid {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-intro {
+                padding: 24px 18px;
+            }
+
+            .faq-summary {
+                padding: 30px 18px;
+            }
+
+            .nav-links {
+                gap: 14px;
+                font-size: 0.88rem;
+                margin-top: 6px;
+            }
+
+            .nav-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 14px;
+            }
+
+            .hero {
+                padding: 40px 0 30px;
+            }
+
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .scene-card {
+                padding: 24px 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 顶部导航 -->
+    <div class="top-nav">
+        <div class="container nav-inner">
+            <div class="logo">彩经网 · 指南</div>
+            <div class="nav-links">
+                <span>介绍</span>
+                <a href="#scene">场景</a>
+                <a href="#faq">常见说明</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero 区域：核心介绍 + 可信说明 -->
+    <div class="hero">
+        <div class="container">
+            <h1>了解彩经网</h1>
+            <p class="tagline">一个关注数字资讯与数据参考的站点，以平实、克制的角度呈现信息。</p>
+            <div class="hero-intro">
+                <p>
+                    很多朋友在搜索「<a href="https://home-cjcp.com" class="highlight-link">彩经网</a>」时，会好奇它到底提供什么。
+                    简单来说，这是一个以数据整理和内容聚合为主的网站，覆盖了多种数字类资讯、历史参考以及相关领域的信息索引。
+                    站点本身不引导任何具体行为，而是把整理好的内容陈列出来，供你按需浏览。
+                </p>
+                <p>
+                    在信息过载的当下，一个清晰、克制的信息源显得尤为难得。
+                    <a href="https://home-cjcp.com">彩经网</a> 的页面设计偏向干净、直接，没有夸张的弹窗或诱导性话术。
+                    你看到的就是它想分享的：结构化的参考信息，仅此而已。无论你是偶尔查阅还是长期关注，都可以保持自己的判断节奏。
+                </p>
+                <p>
+                    关于可信度：站点内容均源自公开整理，不制造虚假数据或承诺收益。
+                    所有信息仅供个人参考，不构成任何形式的建议。访问前请确认自己已成年，并始终保持理性。
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 三个场景模块 -->
+    <div class="scene-section" id="scene">
+        <div class="container">
+            <h2>常见使用场景</h2>
+            <div class="scene-grid">
+                <div class="scene-card">
+                    <div class="scene-icon">📊</div>
+                    <h3>信息查阅</h3>
+                    <p>
+                        通过 <a href="https://home-cjcp.com">彩经网</a> 浏览分类整理的数字资讯与历史参考，
+                        适合希望快速获取结构化信息、而不被无关内容打扰的用户。
+                    </p>
+                </div>
+                <div class="scene-card">
+                    <div class="scene-icon">🔍</div>
+                    <h3>轻量研究</h3>
+                    <p>
+                        对于关注数据变化趋势的朋友，站内提供了多维度索引和汇总页面。
+                        你可以在日常浏览中顺手对比、记录，辅助自己的独立观察。
+                    </p>
+                </div>
+                <div class="scene-card">
+                    <div class="scene-icon">🧭</div>
+                    <h3>入口导航</h3>
+                    <p>
+                        作为一个垂直领域的聚合站，它把分散的相关资源集中到一处。
+                        从 <a href="https://home-cjcp.com">彩经网</a> 出发，你可以更快找到自己感兴趣的子板块或延伸内容。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 常见说明 / FAQ 摘要 -->
+    <div class="faq-summary" id="faq">
+        <div class="container">
+            <h2>常见说明速览</h2>
+            <div class="faq-item">
+                <div class="faq-q">‣ 彩经网是官方网站吗？</div>
+                <div class="faq-a">
+                    是的，<a href="https://home-cjcp.com">彩经网</a> 是其内容的主域名站点，所有公开信息均在此发布。
+                    建议直接通过该地址访问，避免第三方镜像或转载页面。
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">‣ 站内信息有哪些类型？</div>
+                <div class="faq-a">
+                    主要包含数字类资讯、历史数据汇总、术语说明以及相关领域的基础介绍。
+                    内容均以客观整理为主，不包含个人投资建议或诱导性分析。
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">‣ 访问时需要注意什么？</div>
+                <div class="faq-a">
+                    请确认自己已年满 18 周岁，并将所有内容仅作为信息参考。
+                    任何数据都存在局限性，请结合多方渠道综合判断，保持理性与审慎。
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">‣ 网站是否收集个人信息？</div>
+                <div class="faq-a">
+                    根据常规隐私说明，<a href="https://home-cjcp.com">彩经网</a> 不会主动收集个人敏感信息，
+                    但可能使用基础 Cookies 改善访问体验。具体可查阅站内隐私相关页面。
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <div class="footer">
+        <div class="container">
+            <p>内容仅供参考，不构成任何建议 · 请理性对待</p>
+            <p style="margin-top: 8px;">
+                <a href="https://home-cjcp.com">彩经网</a> · 致力于清晰、克制的信息呈现
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
