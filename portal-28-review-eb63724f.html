@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加拿大28 · 简明指南与访问提示 | portal-28.com</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f1f3f6;
+            color: #2c3e50;
+            line-height: 1.7;
+            padding: 2rem 1rem;
+        }
+
+        .page {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* ===== hero 横幅 ===== */
+        .hero {
+            background: linear-gradient(145deg, #e8ecf1 0%, #d6dde6 100%);
+            border-radius: 2rem;
+            padding: 3.5rem 2.5rem;
+            margin-bottom: 2.8rem;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            color: #1e2a3a;
+            margin-bottom: 0.6rem;
+        }
+
+        .hero .sub {
+            font-size: 1.2rem;
+            color: #4b5e71;
+            max-width: 640px;
+            margin: 0 auto;
+            border-top: 1px solid rgba(44, 62, 80, 0.1);
+            padding-top: 1rem;
+        }
+
+        .hero .sub span {
+            display: inline-block;
+            background: #dce3ec;
+            padding: 0.2rem 1rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        /* ===== 卡片与分区 ===== */
+        .section-card {
+            background: #ffffff;
+            border-radius: 1.8rem;
+            padding: 2.2rem 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid #e3e8ef;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+            transition: box-shadow 0.2s;
+        }
+
+        .section-card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-card h2 {
+            font-size: 1.6rem;
+            font-weight: 450;
+            color: #1f2c3c;
+            margin-bottom: 1.2rem;
+            border-left: 4px solid #8a9bb0;
+            padding-left: 1rem;
+        }
+
+        .section-card h3 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #2d4055;
+            margin: 1.6rem 0 0.6rem;
+        }
+
+        .section-card p {
+            margin-bottom: 1rem;
+            color: #3c4e62;
+        }
+
+        .section-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .highlight {
+            background: #f0f3f8;
+            padding: 0.1rem 0.4rem;
+            border-radius: 6px;
+            font-weight: 450;
+        }
+
+        .inline-link {
+            color: #1f4a7a;
+            text-decoration: none;
+            border-bottom: 1px dotted #8faaca;
+            transition: border-color 0.15s, color 0.15s;
+        }
+
+        .inline-link:hover {
+            color: #0b2b4a;
+            border-bottom: 1px solid #1f4a7a;
+        }
+
+        /* ===== 小标签 / 场景 ===== */
+        .tag-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin: 1.2rem 0 0.4rem;
+        }
+
+        .tag {
+            background: #eaeef4;
+            color: #2c4057;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            border: 1px solid #d5dde8;
+        }
+
+        /* ===== 页尾提示 ===== */
+        .footer-note {
+            margin-top: 3rem;
+            padding: 1.8rem 2rem;
+            background: #e6ebf2;
+            border-radius: 2rem;
+            border: 1px solid #d0d8e3;
+            text-align: center;
+            color: #2b3e52;
+            font-size: 0.98rem;
+        }
+
+        .footer-note a {
+            color: #1f4a7a;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid #b0c6db;
+        }
+
+        .footer-note a:hover {
+            border-bottom: 2px solid #1f4a7a;
+        }
+
+        .footer-note .small-print {
+            font-size: 0.82rem;
+            color: #5c6f84;
+            margin-top: 0.8rem;
+            border-top: 1px solid #ccd5e1;
+            padding-top: 0.8rem;
+        }
+
+        /* ===== 响应式 ===== */
+        @media (max-width: 640px) {
+            body {
+                padding: 1rem 0.8rem;
+            }
+            .hero {
+                padding: 2rem 1.2rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .section-card {
+                padding: 1.5rem 1.2rem;
+                border-radius: 1.4rem;
+            }
+            .section-card h2 {
+                font-size: 1.3rem;
+            }
+            .footer-note {
+                padding: 1.2rem 1rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .two-col {
+                display: flex;
+                gap: 2rem;
+            }
+            .two-col .section-card {
+                flex: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- HERO 横幅 -->
+    <header class="hero">
+        <h1>加拿大28 · 简明指南</h1>
+        <div class="sub">
+            从理解到浏览，一份生活化的访问参考
+            <br><span>基于 portal-28.com · 杂志专题</span>
+        </div>
+    </header>
+
+    <!-- 第一段：背景说明 -->
+    <section class="section-card">
+        <h2>▎这个页面在说什么</h2>
+        <p>
+            如果你刚听说 <strong>加拿大28</strong> 这个名字，或者只是想更从容地了解它背后的信息，
+            这里是一份轻巧的导航。我们不堆砌术语，只用几段自然的文字，帮你快速建立框架。
+            所有内容都围绕一个核心：<span class="highlight">如何更顺畅地获取与加拿大28相关的信息</span>。
+        </p>
+        <p>
+            互联网上关于加拿大28的讨论有很多种角度，从规则介绍到社区交流，再到资讯聚合。
+            但真正有用的一手信息，往往藏在一些被忽略的细节里。接下来的几个部分，
+            会从三个不同的场景切入，帮你理清脉络。
+        </p>
+    </section>
+
+    <!-- 第二段 + 第三段 用双列布局 (大屏) -->
+    <div class="two-col">
+        <!-- 第二段：从日常场景切入 -->
+        <section class="section-card">
+            <h2>▎日常场景 &amp; 访问思路</h2>
+            <p>
+                很多人第一次接触加拿大28，是在朋友聊天或社交动态里。你可能会好奇：
+                「这到底是一个怎样的信息源？我应该从哪里开始了解？」
+            </p>
+            <p>
+                其实不必急着搜遍所有角落。先找一个可靠的信息聚合点，
+                比如 <a href="https://portal-28.com" class="inline-link">加拿大28</a> 这个站点，
+                它把基础介绍、最新动态和常见问题整理在一起，省去你四处翻找的精力。
+            </p>
+            <p>
+                之后你可以根据兴趣，再慢慢扩展到社区讨论或专题文章。
+                关键是第一步不要被信息淹没，<span class="highlight">从一份清晰的索引开始</span>。
+            </p>
+            <div class="tag-row">
+                <span class="tag">信息聚合</span>
+                <span class="tag">新手友好</span>
+                <span class="tag">索引式浏览</span>
+            </div>
+        </section>
+
+        <!-- 第三段：提醒与注意事项 -->
+        <section class="section-card">
+            <h2>▎访问提醒 · 保持自己的节奏</h2>
+            <p>
+                互联网信息丰富，但也容易让人迷失。关于加拿大28的浏览，有几点小提醒：
+            </p>
+            <ul style="list-style: none; padding-left: 0; margin: 0.8rem 0 0.6rem;">
+                <li style="margin-bottom: 0.6rem; padding-left: 1.2rem; position: relative;">
+                    <span style="position: absolute; left: 0; color: #5b7186;">•</span>
+                    <strong>来源优先</strong> – 优先看站点本身的说明，少依赖二手转述。
+                </li>
+                <li style="margin-bottom: 0.6rem; padding-left: 1.2rem; position: relative;">
+                    <span style="position: absolute; left: 0; color: #5b7186;">•</span>
+                    <strong>信息时效</strong> – 加拿大28的相关内容会更新，偶尔回看主页能发现新东西。
+                </li>
+                <li style="margin-bottom: 0.6rem; padding-left: 1.2rem; position: relative;">
+                    <span style="position: absolute; left: 0; color: #5b7186;">•</span>
+                    <strong>独立思考</strong> – 任何信息都值得你用常识过滤一遍。
+                </li>
+            </ul>
+            <p>
+                把浏览当成一次轻松的散步，而不是任务。如果某个页面让你觉得困惑，
+                退回来，重新翻翻 <a href="https://portal-28.com" class="inline-link">加拿大28</a> 的基础部分，
+                往往能找到线索。
+            </p>
+        </section>
+    </div>
+
+    <!-- 第四段：FAQ 摘要 (轻量) -->
+    <section class="section-card">
+        <h2>▎快速问答摘要</h2>
+        <div style="margin-bottom: 0.8rem;">
+            <h3 style="font-size: 1rem; margin: 0 0 0.2rem; color: #2d4055;">Q：加拿大28是一个平台吗？</h3>
+            <p style="margin-left: 0.2rem;">更像一个信息节点，聚合了相关介绍、动态和参考链接，方便你一站式了解。</p>
+        </div>
+        <div style="margin-bottom: 0.8rem;">
+            <h3 style="font-size: 1rem; margin: 0 0 0.2rem; color: #2d4055;">Q：我需要注册或登录才能看吗？</h3>
+            <p style="margin-left: 0.2rem;">大部分内容公开可读，不需要额外操作。部分互动功能可能另有说明。</p>
+        </div>
+        <div>
+            <h3 style="font-size: 1rem; margin: 0 0 0.2rem; color: #2d4055;">Q：如果我想深入了解，从哪里开始？</h3>
+            <p style="margin-left: 0.2rem;">直接访问 <a href="https://portal-28.com" class="inline-link">加拿大28</a> 主页，从「指南」或「介绍」板块开始最稳妥。</p>
+        </div>
+    </section>
+
+    <!-- 页尾访问提示 -->
+    <footer class="footer-note">
+        <p>
+            🌱 无论你是第一次听说，还是想回顾细节，
+            <a href="https://portal-28.com">加拿大28</a> 都为你准备了一份清晰的信息入口。
+            慢慢看，按自己的节奏来。
+        </p>
+        <div class="small-print">
+            杂志专题式页面 · 基于 portal-28.com 内容框架 · 仅供参考
+        </div>
+    </footer>
+
+</div>
+</body>
+</html>
